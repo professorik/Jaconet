@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problem_6.Controller">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Original">
+            <content>
+              <AnchorPane fx:id="originalAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="350.0" fitWidth="376.0" layoutX="358.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="223.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="223.0">
+                           <image>
+                              <Image url="@../resources/cloud-storage-uploading-option.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Processed">
+               <content>
+                  <AnchorPane fx:id="processedAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="350.0" fitWidth="376.0" layoutX="358.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="223.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="223.0">
+                           <image>
+                              <Image url="@../resources/cloud-storage-uploading-option.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="uploadImageBtn" mnemonicParsing="false" text="Upload Image" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
