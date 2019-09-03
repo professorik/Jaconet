@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.SortImage">
+  <items>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Файлы">
+                  <items>
+                    <MenuItem fx:id="uploadFiles" mnemonicParsing="false" text="Загрузить файлы" />
+                      <MenuItem fx:id="addFiles" mnemonicParsing="false" text="Добавить файлы" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Воспроизведение">
+                  <items>
+                    <MenuItem fx:id="run" mnemonicParsing="false" text="Вручную" />
+                      <MenuItem fx:id="runAuto" mnemonicParsing="false" text="Автоматически" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Параметры задержки">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Установить задержку" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane fx:id="anchor" prefHeight="424.0" prefWidth="407.0" />
+         </children>
+      </VBox>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="667.0" style="-fx-background-color: black;">
+         <children>
+            <BorderPane prefHeight="398.0" prefWidth="470.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <bottom>
+                  <ScrollPane fitToHeight="true" prefHeight="110.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <HBox fx:id="frameBox" maxHeight="1.7976931348623157E308" prefHeight="98.0" prefWidth="470.0" />
+                     </content>
+                  </ScrollPane>
+               </bottom>
+               <center>
+                  <AnchorPane prefHeight="375.0" prefWidth="594.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="mainFrameImageView" fitHeight="400.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../DronePhotos/2016_0101_000725_002.JPG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="backFrameButton" mnemonicParsing="false" prefHeight="309.0" prefWidth="55.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="47.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/left-arrow.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="nextFrameButton" layoutX="445.0" mnemonicParsing="false" prefHeight="314.0" prefWidth="55.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="445.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="47.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/right-arrow.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
